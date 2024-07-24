@@ -82,3 +82,20 @@ console.log(hobbies); // Output: No Hobbies
 const numbers = [1, 2, 3];
 const doubledNumbers = numbers.map((num) => num * 2);
 console.log(doubledNumbers); // Output: [2, 4, 6]
+
+const books = [
+  book1 = {title: 'Book1', author: 'Author1', price: 10},
+  book2 = {title: 'Book2', author: 'Author2', price: 15},
+  book3 = {title: 'Book3', author: 'Author', price: 20}
+]
+const essentialData = books.map((book) => ({
+  title: book.title,
+  price: book.price
+}));
+console.log(essentialData); // Output: [ { title: 'Book1', price: 10 }, { title: 'Book2', price: 15 }, { title: 'Book3', price: 20 } ]
+
+//Array filter method
+const randomNumbers = [1, 2, 3, 4, 5];
+const evenNumbers = randomNumbers.filter((num) => num % 2 === 0);
+console.log(evenNumbers); // Output: [2, 4]
+
