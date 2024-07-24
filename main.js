@@ -77,3 +77,8 @@ console.log(hobby); // Output: undefined
 //Coalescing Assignment Operator
 const hobbies = user.hobbies?.[0] ?? 'No Hobbies';
 console.log(hobbies); // Output: No Hobbies
+
+//Array map method
+const numbers = [1, 2, 3];
+const doubledNumbers = numbers.map((num) => num * 2);
+console.log(doubledNumbers); // Output: [2, 4, 6]
