@@ -97,5 +97,50 @@ console.log(essentialData); // Output: [ { title: 'Book1', price: 10 }, { title:
 //Array filter method
 const randomNumbers = [1, 2, 3, 4, 5];
 const evenNumbers = randomNumbers.filter((num) => num % 2 === 0);
+const oddNumbersMultiplication = randomNumbers.filter((num) => num % 2 !== 0).map((num) => num * 2);
 console.log(evenNumbers); // Output: [2, 4]
+console.log(oddNumbersMultiplication); // Output: [2, 6, 10]
 
+//Array reduce method
+const numbers2 = [1, 2, 3, 4, 5];
+const sum = numbers2.reduce((acc, num) => acc + num, 0); // 0 is the initial value for the accumulator
+console.log(sum); // Output: 15
+
+// Array Sort method
+const fruits = ['Banana', 'Orange', 'Apple'];
+const sortedFruits = fruits.sort();
+console.log(sortedFruits); // Output: ['Apple', 'Banana', 'Orange']
+
+const numbers3 = [1, 30, 4, 21, 100000];
+const sortedNumbers = numbers3.slice().sort((a, b) => a - b); //It mutates the original array
+console.log(sortedNumbers); // Output: [1, 4, 21, 30, 100000]
+console.log(numbers3); // Output: [1, 30, 4, 21, 100000]
+
+// Working with immutable arrays
+const numbers4 = [1, 2, 3];
+// Adding a new element to the array
+const newNumbers = [...numbers4, 4];
+console.log(newNumbers); // Output: [1, 2, 3, 4]
+console.log(numbers4); // Output: [1, 2, 3]
+// Removing an element from the array
+const filteredNumbers = numbers4.filter((num) => num !== 2);
+console.log(filteredNumbers); // Output: [1, 3]
+// Updating an element in the array
+const updatedNumbers = numbers4.map((num) => (num === 2 ? 20 : num));
+console.log(updatedNumbers); // Output: [1, 20, 3]
+
+// Asynchronous JavaScript
+// fetch('https://jsonplaceholder.typicode.com/todos')
+//     .then((response) => response.json())
+//     .then((data) => console.log(data))
+//     .catch((error) => console.log(error));
+// console.log("This will be logged first");
+
+//Async/Await
+async function fetchData() {
+  const response = await fetch('https://jsonplaceholder.typicode.com/todos')
+  return await response.json()
+}
+const result = fetchData()
+console.log(result); // Output: Promise { <pending> }
+console.log("This will be logged first");
